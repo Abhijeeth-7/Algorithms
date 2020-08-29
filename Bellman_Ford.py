@@ -10,7 +10,7 @@ def bellmanford(adj,source):
     N=len(adj)
     edges=list()
     dist=[sys.maxsize]*N
-    dist[0]=0
+    dist[source]=0
     
     class edge:
         def __init__(self,u,v,weight):
@@ -26,7 +26,7 @@ def bellmanford(adj,source):
     
     for _ in range(len(adj)-1):
         for edge in edges:
-            if dist[edge.source]!=0 and \
+            if dist[edge.source]!=sys.maxsize and \
             dist[edge.dest] > dist[edge.source]+edge.weight:
                 dist[edge.dest]=dist[edge.source]+edge.weight
                 
@@ -34,7 +34,7 @@ def bellmanford(adj,source):
 #   if the distances are reduced even further after bellmanford algorithm
 #   it indicates the presence of negative cycles             
     for edge in edges:
-        if dist[edge.source]!=9999 and\
+        if dist[edge.source]!=sys.amxsize and\
         dist[edge.dest] > dist[edge.source]+edge.weight:
             print("""negative cycles in the graph!,
                   can't run this algorithm on graph 
