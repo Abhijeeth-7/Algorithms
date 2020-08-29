@@ -59,6 +59,6 @@ adj=[[0, 4, 0, 0, 0, 0, 0, 8, 0],
         ]; 
 #please provide the arguments in the following manner:
 # arg1: adj matrix
-# arg2: Soruce vertix number
-# arg3: Destinaation
+# arg2: Soruce vertix
+# arg3: Destination
 Dijikstra(len(adj),0,8)            
