@@ -44,8 +44,7 @@ def Dijikstra(V,source,dest):
     print(*range(V))
     print(*dist)
     print("~path from source to destination~")
-    getPath(prevNode[dest],prevNode)
-    print(dest)
+    getPath(dest,prevNode)
 
 adj=[[0, 4, 0, 0, 0, 0, 0, 8, 0], 
         [4, 0, 8, 0, 0, 0, 0, 11, 0], 
