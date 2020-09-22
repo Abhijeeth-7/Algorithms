@@ -77,7 +77,7 @@ class Tree:
         if self.data==value:
             print("Found")
         else:
-            if self.left!=None and value<self.data:
+            if self.left!=None and value<=self.data:
                 (self.left).search(value)
             elif self.right!=None:
                 (self.right).search(value)
